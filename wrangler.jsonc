@@ -1,0 +1,9 @@
+{
+  "name": "agents-repro",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-03-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "not_found_handling": "single-page-application" },
+  "durable_objects": { "bindings": [{ "name": "Chat", "class_name": "Chat" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Chat"] }]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "agents-repro",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite dev", "build": "vite build", "preview": "vite preview" },
+  "dependencies": {
+    "@ai-sdk/react": "3.0.221",
+    "@cloudflare/ai-chat": "0.12.1",
+    "agents": "0.26.0",
+    "ai": "6.0.219",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.45.1",
+    "@vitejs/plugin-react": "6.0.3",
+    "vite": "8.1.5",
+    "wrangler": "4.112.0",
+    "playwright": "1.61.1",
+    "typescript": "^5.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+diff --git a/packages/agents/src/chat/react.tsx b/packages/agents/src/chat/react.tsx
+index 221f65c..fa1697b 100644
+--- a/packages/agents/src/chat/react.tsx
++++ b/packages/agents/src/chat/react.tsx
+@@ -2736,6 +2736,11 @@ export function useAgentChat<
+       socketIsOpen = false;
+       sawClose = true;
+       serverReportsRecovery = false;
++      // The close ended the local request's stream, so its done frame never
++      // arrives: release what that frame would release, or every later
++      // snapshot keeps the cut-off local copy of the reply.
++      protectedStreamingAssistantRef.current = null;
++      localResponseIds.clear();
+       fallbackAckedResumeRequestIds.clear();
+ 
+       const unfinishedTurnId = customTransport.activeServerTurnId;
